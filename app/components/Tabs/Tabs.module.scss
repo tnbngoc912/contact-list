@@ -1,0 +1,55 @@
+@use '@/styles/variables.scss'; 
+
+.tabContainer {
+ 
+  width: 70%;
+  background: #f5f9ff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    min-height: 70vh;
+  @media (max-width: 768px) {
+    width: 90%;
+
+  }
+
+  .tabHeaders {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .tabItem {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    color: variables.$color-text;
+  
+    &:hover {
+      border-color: none;
+      color: variables.$color-dark-grey;
+    }
+  }
+  
+  .activeTab {
+    border-bottom: 2px solid variables.$color-primary;
+    
+    color: variables.$color-primary;
+    font-weight: 600;
+    &:hover {
+      border-color:variables.$color-primary;
+    }
+  }
+  
+  .tabContent {
+    padding: 20px;
+    @media (max-width: 768px) {
+      padding: 0px;
+    }
+  
+  }
+  
+}
+

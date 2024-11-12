@@ -1,0 +1,72 @@
+@use '@/styles/variables.scss';
+
+.button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &.text {
+    background-color: transparent;
+    color: variables.$color-primary;
+    padding: 0;
+
+    &:hover {
+      background-color: #eff6ff;
+    }
+  }
+
+  &.contained {
+    background-color:  variables.$color-primary;
+    color: white;
+    border-color:  variables.$color-primary;
+
+    &:hover {
+      background-color:  variables.$color-dark-blue;
+    }
+  }
+
+  &.outlined {
+    background-color: transparent;
+    color:  variables.$color-primary;
+    border: 1px solid  variables.$color-primary;
+
+    &:hover {
+      background-color: #e7f2ff;
+    }
+  }
+
+  &.icon {
+    background-color: transparent;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: #eff6ff;
+      
+      svg path {
+        fill:  variables.$color-primary;
+      }
+    }
+  }
+}

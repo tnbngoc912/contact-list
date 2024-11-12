@@ -1,0 +1,86 @@
+@use '@/styles/variables.scss';
+
+.contactItem {
+  display: grid;
+  grid-template-columns: auto 3fr 1fr;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  gap: 20px;
+  opacity: 0;
+  transform: translateY(20px); 
+  animation: fadeInSlideUp 0.5s ease-out forwards;
+
+  @keyframes fadeInSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .profileImage {
+    display: inline-block;
+    background-color: rgb(196, 196, 196);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 22px;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+  }
+
+  .contactDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    text-align: left;
+
+    h3 {
+      margin: 0;
+      font-size: variables.$fs16;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+
+    p {
+      margin: 0;
+      color: #666;
+      font-size: 14px;
+    }
+  }
+
+  .actions {
+    display: flex;   
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-end;
+
+    button {
+      margin-left: 10px;
+    }
+  }
+}
+
+.iconFavorite {
+  &.active {
+    fill: yellow;
+  }
+}
+
+.btnActionsDelete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+

@@ -1,0 +1,40 @@
+@use './variables';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: variables.$font-family-base;
+  background-color: variables.$color-background;
+  color: variables.$color-text;
+  line-height: 1.6;
+ background-color: #fff;
+  color: #333;
+}
+
+a {
+  color: variables.$color-primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.container {
+  margin-bottom: 2rem;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  position: relative;
+}

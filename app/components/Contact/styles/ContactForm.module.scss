@@ -1,0 +1,14 @@
+.formContainer {
+  border-radius: 8px;
+  max-width: 500px;
+  margin: auto;
+
+  .actionsForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+}
+
+
